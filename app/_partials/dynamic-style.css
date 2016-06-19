@@ -1,0 +1,19 @@
+<style type="text/css">
+    body {
+        background-color: {{styleObject.bgColor}};
+    }
+    .ace-tm .ace_gutter {
+        display: none !important;
+    }
+    .ace_scroller {
+        left: 0 !important;
+    }
+    .editor {
+        background-color: {{styleObject.bgColor}};
+    }
+    .editor pre {
+        background-color: {{styleObject.bgColor}};
+        color: {{styleObject.color}};
+        font-family: {{styleObject.fontFamily}};
+    }
+</style>

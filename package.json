@@ -1,0 +1,19 @@
+{
+  "name": "angular-starter-pack",
+  "version": "1.0.0",
+  "description": "Yet another Angular starter pack.",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian M (ian@union.io)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

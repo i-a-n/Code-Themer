@@ -1,0 +1,34 @@
+<header class='header'>
+	<div class='logo'>/</div>
+	<h3>better/monospace</h3>
+	<language-selector></language-selector>
+</header>
+
+<div class='body-container'>
+    <div class='toolbar'>
+        <div class='toolbar-container'>
+			<h3>Color</h3>
+            background:
+				<spectrum-colorpicker
+					ng-model="styleObject.bgColor"
+					options="{showInput: true}"
+					format="'hex'">
+				</spectrum-colorpicker>
+			<br>
+            default text:
+				<spectrum-colorpicker
+					ng-model="styleObject.color"
+					options="{showInput: true}"
+					format="'hex'">
+				</spectrum-colorpicker>
+			<h3>Typography</h3>
+			font: <input ng-model="styleObject.fontFamily">
+			<h3>Options</h3>
+			 <input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
+        </div>
+    </div>
+
+    <div class='editor'>
+        <code-box></code-box>
+    </div>
+</div>

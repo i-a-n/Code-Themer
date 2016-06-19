@@ -1,2 +1,2 @@
-# bettermonospace
-Code editor theme builder
+# better/monospace
+Theme builder for your code editor. Under development. 
