@@ -5,8 +5,9 @@
 
     // Global objects?
     var styleObject = {
-        'bgColor': '#222',
-        'color': 'white'
+        'bgColor': '#002B36',
+        'color': '#93A1A1',
+        'fontSize': '15'
     };
     var languages = [
         'JavaScript',
