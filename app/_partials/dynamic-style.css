@@ -14,7 +14,40 @@
     .editor pre {
         background-color: {{styleObject.bgColor}};
         color: {{styleObject.color}};
-        font-family: {{styleObject.fontFamily}};
+        font-family: {{styleObject.fontFamily}}, monospace;
         font-size: {{styleObject.fontSize}}px;
     }
+    .ace_cursor,
+    .ace_string.ace_regexp {
+      color: {{styleObject.cursorColor}};
+    }
+    .ace_keyword,
+    .ace_meta,
+    .ace_support.ace_class,
+    .ace_support.ace_type {
+      color: {{styleObject.keywordColor}};
+    }
+    .ace_constant.ace_character,
+    .ace_constant.ace_other {
+      color: {{styleObject.constantColor}};
+    }
+    .ace_entity.ace_name.ace_function,
+    .ace_entity.ace_name.ace_tag,
+    .ace_support.ace_function,
+    .ace_variable,
+    .ace_variable.ace_language {
+      color: {{styleObject.functionColor}};
+    }
+    .ace_string {
+      color: {{styleObject.stringColor}};
+    }
+    .ace_comment {
+      font-style: {{styleObject.commentStyle}};
+      color: {{styleObject.commentColor}};
+    }
+    .ace_entity.ace_other.ace_attribute-name,
+    .ace_storage {
+      color: {{styleObject.typeColor}};
+    }
+
 </style>

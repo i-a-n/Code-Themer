@@ -3,16 +3,6 @@
   color: #d0edf7
 }
 
-.ace_print-margin {
-  width: 1px;
-  background: #33555E
-}
-
-{
-  background-color: #002B36;
-  color: #93A1A1
-}
-
 .ace_entity.ace_other.ace_attribute-name,
 .ace_storage {
   color: #93A1A1

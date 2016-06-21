@@ -7,7 +7,15 @@
     var styleObject = {
         'bgColor': '#002B36',
         'color': '#93A1A1',
-        'fontSize': '15'
+        'fontSize': '15',
+        'cursorColor': '#D30102',
+        'keywordColor': '#859900',
+        'constantColor': '#CB4B16',
+        'functionColor': '#268BD2',
+        'stringColor': '#2AA198',
+        'commentColor': '#657B83',
+        'commentStyle': 'italic',
+        'typeColor': '#93A1A1'
     };
     var languages = [
         'JavaScript',

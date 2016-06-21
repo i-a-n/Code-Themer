@@ -8,25 +8,74 @@
     <div class='toolbar'>
         <div class='toolbar-container'>
 			<h3>Color</h3>
-            background:
-				<spectrum-colorpicker
-					ng-model="styleObject.bgColor"
-					options="{showInput: true}"
-					format="'hex'">
-				</spectrum-colorpicker>
+			<spectrum-colorpicker
+				ng-model="styleObject.bgColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			background
 			<br>
-            default text:
-				<spectrum-colorpicker
-					ng-model="styleObject.color"
-					options="{showInput: true}"
-					format="'hex'">
-				</spectrum-colorpicker>
+			<spectrum-colorpicker
+				ng-model="styleObject.color"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			default text
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.keywordColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			keyword/meta
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.constantColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			characters
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.functionColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			functions
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.stringColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			strings
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.commentColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			comments
+			<br>
+			<spectrum-colorpicker
+				ng-model="styleObject.typeColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
+			storage/type
 			<h3>Typography</h3>
 			font: <input ng-model="styleObject.fontFamily">
 			<br>
 			font size: <input type='number' ng-model="styleObject.fontSize">
+			<br>
+			<input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
 			<h3>Options</h3>
-			 <input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
+			cursor color:
+			<spectrum-colorpicker
+				ng-model="styleObject.cursorColor"
+				options="{showInput: true}"
+				format="'hex'">
+			</spectrum-colorpicker>
         </div>
     </div>
 
