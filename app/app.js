@@ -3,11 +3,13 @@
 (function() {
     var app = angular.module("codeInspired", ["firebase","ngRoute","angularSpectrumColorpicker"]);
 
-    // Global objects?
+    // Global objects
+    var fontURL = "//fonts.union.io/css/compiled/";
     var styleObject = {
         'bgColor': '#002B36',
         'color': '#93A1A1',
-        'fontSize': '15',
+        'fontSize': 15,
+        'fontFamily': 'Source Code Pro',
         'cursorColor': '#D30102',
         'keywordColor': '#859900',
         'constantColor': '#CB4B16',
@@ -29,6 +31,18 @@
         'JavaScript': 'js',
         'PHP': 'php'
     };
+    var fontFileNames = [
+        {
+            name: 'Source Code Pro',
+            fileName: 'source-code-pro'
+        }, {
+            name: 'Fira Mono',
+            fileName: 'fira-mono'
+        }, {
+            name: 'Consolas',
+            fileName: 'consolas'
+        }
+    ];
     var statusString = "Coming soon.";
 
     app.controller("DefaultController", function($scope, $firebaseObject) {
@@ -37,6 +51,7 @@
         $scope.languages          = languages;
         $scope.selectedLanguage   = languages[0];
         $scope.languageBrushNames = languageBrushNames;
+        $scope.fontFileNames      = fontFileNames;
 
         // No firebase yet; I don't want to hard-code my own dummy app here.
         // To set up firebase, see:
@@ -63,20 +78,29 @@
     });
 
     // configuring a very basic routing scheme.
-    app.config(['$routeProvider',
-      function($routeProvider) {
+    app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
-          when('/editor', {
-            templateUrl: 'app/_partials/editor.html',
-            controller: 'DefaultController'
-          }).
-          when('/editor/:themeID', {
-            templateUrl: 'app/_partials/editor.html',
-            controller: 'DetailController'
-          }).
-          otherwise({
-            redirectTo: '/editor'
-          });
-      }]);
+            when('/editor', {
+                templateUrl: 'app/_partials/editor.html',
+                controller: 'DefaultController'
+            }).
+            when('/editor/:themeID', {
+                templateUrl: 'app/_partials/editor.html',
+                controller: 'DetailController'
+            }).
+            otherwise({
+                redirectTo: '/editor'
+            });
+    }]);
+
+    // onready bullshit, sorry for the global var
+    app.directive('onReady', function() {
+        return {
+            restrict: 'A',
+            link: function(scope, elem, attrs) {
+                domReady();
+            }
+        };
+    });
 
 })();

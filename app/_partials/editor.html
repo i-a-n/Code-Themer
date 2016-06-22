@@ -6,76 +6,91 @@
 
 <div class='body-container'>
     <div class='toolbar'>
-        <div class='toolbar-container'>
-			<h3>Color</h3>
-			<spectrum-colorpicker
-				ng-model="styleObject.bgColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			background
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.color"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			default text
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.keywordColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			keyword/meta
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.constantColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			characters
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.functionColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			functions
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.stringColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			strings
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.commentColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			comments
-			<br>
-			<spectrum-colorpicker
-				ng-model="styleObject.typeColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
-			storage/type
-			<h3>Typography</h3>
-			font: <input ng-model="styleObject.fontFamily">
-			<br>
-			font size: <input type='number' ng-model="styleObject.fontSize">
-			<br>
-			<input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
-			<h3>Options</h3>
-			cursor color:
-			<spectrum-colorpicker
-				ng-model="styleObject.cursorColor"
-				options="{showInput: true}"
-				format="'hex'">
-			</spectrum-colorpicker>
+        <div class='toolbar-container' on-ready>
+			<div>
+				<h3 class='js-accordionControl'>Color</h3>
+				<div class='accordion-body'>
+					<spectrum-colorpicker
+						ng-model="styleObject.bgColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					background
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.color"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					default text
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.keywordColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					keyword/meta
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.constantColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					characters
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.functionColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					functions
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.stringColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					strings
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.commentColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					comments
+					<br>
+					<spectrum-colorpicker
+						ng-model="styleObject.typeColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+					storage/type
+				</div>
+			</div>
+			<div>
+				<h3 class='js-accordionControl  inactive'>Typography</h3>
+				<div class='accordion-body'>
+					font:
+						<select ng-model="styleObject.fontFamily">
+							<option ng-repeat="font in fontFileNames">{{font.name}}</option>
+						</select>
+					<br>
+					font size: <input type='number' ng-model="styleObject.fontSize">
+					<br>
+					<input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
+				</div>
+			</div>
+			<div>
+				<h3 class='js-accordionControl  inactive'>Options</h3>
+				<div class='accordion-body'>
+					cursor color:
+					<spectrum-colorpicker
+						ng-model="styleObject.cursorColor"
+						options="{showInput: true}"
+						format="'hex'">
+					</spectrum-colorpicker>
+				</div>
+			</div>
         </div>
     </div>
 

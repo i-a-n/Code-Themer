@@ -48,6 +48,11 @@ p {
 		padding: 0 1em;
 		font-size: 28px;
 		line-height: @headerHeight;
+
+		&:hover {
+			text-decoration: underline;
+			cursor: default;
+		}
 	}
 	.language {
 		display: inline-block;
@@ -73,6 +78,13 @@ p {
 
 	.toolbar-container {
 		margin: 1em;
+
+		h3.inactive {
+			&:hover {
+				text-decoration: underline;
+				cursor: default;
+			}
+		}
 	}
 }
 .editor {
@@ -94,4 +106,16 @@ p {
 			outline: none;
 		}
 	}
+}
+.accordion-body {
+	overflow: hidden;
+	-webkit-transition: max-height 0.44s ease-in-out;
+	-moz-transition: max-height 0.44s ease-in-out;
+	transition: max-height 0.44s ease-in-out;
+}
+.js-accordionControl + .accordion-body {
+	max-height: 100vh;
+}
+.js-accordionControl.inactive + .accordion-body {
+	max-height: 0;
 }
