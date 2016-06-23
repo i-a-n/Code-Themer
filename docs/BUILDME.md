@@ -1,11 +1,15 @@
-##Angular starter pack details
+##Build details
+This project was bootstrapped from one of my other repos, the [Angular Starter Pack](github.com/i-a-n/angular-starter-pack). The original how-to docs are still relevant:
+
+---
+
 I made this for myself to reference for future front-end projects. The pack includes:
 
 *angular*—EXTREME JAVASCRIPTING
 
 *bower*—This manages the packages, including Angular itself. It puts everything in /bower_components. That's why I'm git-ignoring /bower_components and just running `bower init'.
 
-*bootstrap*—Basic bootstrap. Will live in /bower_components. Gets linked that way from the app's HTML. Just using the CSS really.
+~~*bootstrap*—Basic bootstrap. Will live in /bower_components. Gets linked that way from the app's HTML. Just using the CSS really.~~
 
 *grunt*—Using this to build less files into CSS.
 
