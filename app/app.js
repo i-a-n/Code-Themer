@@ -6,19 +6,54 @@
     // Global objects
     var fontURL = "//fonts.union.io/css/compiled/";
     var styleObject = {
-        'bgColor': '#002B36',
-        'color': '#93A1A1',
-        'fontSize': 15,
-        'fontFamily': 'Source Code Pro',
-        'cursorColor': '#D30102',
-        'keywordColor': '#859900',
-        'constantColor': '#CB4B16',
-        'functionColor': '#268BD2',
-        'stringColor': '#2AA198',
-        'commentColor': '#657B83',
-        'commentStyle': 'italic',
-        'typeColor': '#93A1A1'
+        'bgColor'      : '#002B36',
+        'color'        : '#93A1A1',
+        'fontSize'     : 15,
+        'fontFamily'   : 'Source Code Pro',
+        'fontWeight'   : 'normal',
+        'lineHeight'   : 20,
+        'cursorColor'  : '#D30102',
+        'fields'       : {
+            'keywords' : {
+                'color' : '#859900',
+                'weight': 'normal',
+                'style' : 'normal'
+            },
+            'constants' : {
+                'color' : '#CB4B16',
+                'weight': 'normal',
+                'style' : 'normal'
+            },
+            'functions' : {
+                'color' : '#268BD2',
+                'weight': 'normal',
+                'style' : 'normal'
+            },
+            'strings' : {
+                'color' : '#2AA198',
+                'weight': 'normal',
+                'style' : 'normal'
+            },
+            'comments' : {
+                'color' : '#657B83',
+                'weight': 'normal',
+                'style' : 'italic'
+            },
+            'type' : {
+                'color' : '#93A1A1',
+                'weight': 'normal',
+                'style' : 'normal'
+            }
+        }
     };
+    var highlightableFields = [
+        'keywords',
+        'constants',
+        'functions',
+        'strings',
+        'comments',
+        'types'
+    ];
     var languages = [
         'JavaScript',
         'PHP',
@@ -52,6 +87,8 @@
         $scope.selectedLanguage   = languages[0];
         $scope.languageBrushNames = languageBrushNames;
         $scope.fontFileNames      = fontFileNames;
+
+        console.log($scope.styleObject);
 
         // No firebase yet; I don't want to hard-code my own dummy app here.
         // To set up firebase, see:

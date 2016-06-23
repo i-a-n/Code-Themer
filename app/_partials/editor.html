@@ -10,61 +10,32 @@
 			<div>
 				<h3 class='js-accordionControl'>Color</h3>
 				<div class='accordion-body'>
-					<spectrum-colorpicker
-						ng-model="styleObject.bgColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					background
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.color"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					default text
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.keywordColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					keyword/meta
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.constantColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					characters
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.functionColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					functions
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.stringColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					strings
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.commentColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					comments
-					<br>
-					<spectrum-colorpicker
-						ng-model="styleObject.typeColor"
-						options="{showInput: true}"
-						format="'hex'">
-					</spectrum-colorpicker>
-					storage/type
+					<ul>
+						<li>
+							<spectrum-colorpicker
+								ng-model="styleObject.bgColor"
+								options="{showInput: true}"
+								format="'hex'">
+							</spectrum-colorpicker>
+							background
+						</li>
+						<li>
+							<spectrum-colorpicker
+								ng-model="styleObject.color"
+								options="{showInput: true}"
+								format="'hex'">
+							</spectrum-colorpicker>
+							default text
+						</li>
+						<li ng-repeat="(fieldName, valueObject) in styleObject.fields">
+							<spectrum-colorpicker
+								ng-model="styleObject.fields[fieldName]['color']"
+								options="{showInput: true}"
+								format="'hex'">
+							</spectrum-colorpicker>
+							{{fieldName}}
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div>
@@ -75,9 +46,11 @@
 							<option ng-repeat="font in fontFileNames">{{font.name}}</option>
 						</select>
 					<br>
-					font size: <input type='number' ng-model="styleObject.fontSize">
+					font size:
+						<input ng-model="styleObject.fontSize" type="range" min="11" max="28" step="1">
 					<br>
-					<input ng-model="styleObject.commentsItalic" type="checkbox"> Italic comments
+					line height:
+						<input ng-model="styleObject.lineHeight" type="range" min="11" max="36" step="1">
 				</div>
 			</div>
 			<div>

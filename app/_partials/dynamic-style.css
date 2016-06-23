@@ -16,6 +16,7 @@
         color: {{styleObject.color}};
         font-family: {{styleObject.fontFamily}}, monospace;
         font-size: {{styleObject.fontSize}}px;
+        line-height: {{styleObject.lineHeight}}px;
     }
     .ace_cursor,
     .ace_string.ace_regexp {
@@ -25,29 +26,29 @@
     .ace_meta,
     .ace_support.ace_class,
     .ace_support.ace_type {
-      color: {{styleObject.keywordColor}};
+      color: {{styleObject.fields.keywords.color}};
     }
     .ace_constant.ace_character,
     .ace_constant.ace_other {
-      color: {{styleObject.constantColor}};
+      color: {{styleObject.fields.constants.color}};
     }
     .ace_entity.ace_name.ace_function,
     .ace_entity.ace_name.ace_tag,
     .ace_support.ace_function,
     .ace_variable,
     .ace_variable.ace_language {
-      color: {{styleObject.functionColor}};
+      color: {{styleObject.fields.functions.color}};
     }
     .ace_string {
-      color: {{styleObject.stringColor}};
+      color: {{styleObject.fields.strings.color}};
     }
     .ace_comment {
-      font-style: {{styleObject.commentStyle}};
-      color: {{styleObject.commentColor}};
+      font-style: {{styleObject.fields.comments.style}};
+      color: {{styleObject.fields.comments.color}};
     }
     .ace_entity.ace_other.ace_attribute-name,
     .ace_storage {
-      color: {{styleObject.typeColor}};
+      color: {{styleObject.fields.types.color}};
     }
 
 </style>
