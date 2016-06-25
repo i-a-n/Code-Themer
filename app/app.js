@@ -39,7 +39,7 @@
                 'weight': 'normal',
                 'style' : 'italic'
             },
-            'type' : {
+            'storage' : {
                 'color' : '#93A1A1',
                 'weight': 'normal',
                 'style' : 'normal'

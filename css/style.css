@@ -30,6 +30,10 @@ p {
 .header {
   background-color: #00838F;
   color: white;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 4;
 }
 .header .logo {
   display: inline-block;
@@ -66,6 +70,7 @@ p {
   align-items: stretch;
   justify-content: flex-start;
   flex: 1 0 auto;
+  margin-top: 60px;
 }
 .toolbar {
   background-color: #006064;
@@ -77,10 +82,21 @@ p {
 }
 .toolbar .toolbar-container {
   margin: 1em;
+  width: 100%;
 }
 .toolbar .toolbar-container h3.inactive:hover {
   text-decoration: underline;
   cursor: default;
+}
+ul.listControl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.listControl li {
+  padding: 2px 0 15px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .editor {
   background: #002B36;
@@ -88,6 +104,9 @@ p {
   display: flex;
   flex: 0 0 75%;
   overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 .editor code-box {
   width: 100%;

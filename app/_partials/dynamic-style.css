@@ -48,7 +48,7 @@
     }
     .ace_entity.ace_other.ace_attribute-name,
     .ace_storage {
-      color: {{styleObject.fields.types.color}};
+      color: {{styleObject.fields.storage.color}};
     }
 
 </style>
