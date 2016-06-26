@@ -33,14 +33,14 @@ $ http-server [path to your app]
 ```
 
 ###Production
-If you're going to put this in production somewhere, one quick way to do that would be to un-ignore /bower_components and commit it. Then you can deploy this anywhere without having to do any building at all; It'll just work when installed.
+If you're going to put this in production somewhere~~, one quick way to do that would be to un-ignore /bower_components and commit it. Then~~ you can deploy this anywhere without having to do any building at all; It'll just work when installed.
 
 ###Schema
 ```
 /
 | - app/                          // Angular app lives here
 |   | - _partials/                  // HTML 'views' live here. Referenced by controllers.
-| - bower_components/             // Destination for bower dependencies. Being git ignored.
+| - bower_components/             // Destination for bower dependencies. ~~Being git ignored.~~
 | - bower.json                    // List of HTML-ly dependencies to include.
 | - css/                          // Compiled CSS, only add vendor stuff here.
 |   | - style.css                   // LESS compiles everything into this file. Don't touch.
