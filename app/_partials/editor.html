@@ -5,33 +5,24 @@
 </header>
 
 <div class='body-container'>
-    <div class='toolbar'>
-        <div class='toolbar-container' on-ready>
+	<div class='toolbar'>
+		<div class='toolbar-container' on-ready>
 			<div>
 				<h3 class='js-accordionControl'>Color</h3>
 				<div class='accordion-body'>
 					<ul class='listControl'>
 						<li>
-							<spectrum-colorpicker
-								ng-model="styleObject.bgColor"
-								options="{showInput: true}"
-								format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.bgColor" options="{showInput: true}" format="'hex'">
 							</spectrum-colorpicker>
 							background
 						</li>
 						<li>
-							<spectrum-colorpicker
-								ng-model="styleObject.color"
-								options="{showInput: true}"
-								format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.color" options="{showInput: true}" format="'hex'">
 							</spectrum-colorpicker>
 							default text
 						</li>
 						<li ng-repeat="(fieldName, valueObject) in styleObject.fields">
-							<spectrum-colorpicker
-								ng-model="styleObject.fields[fieldName]['color']"
-								options="{showInput: true}"
-								format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.fields[fieldName]['color']" options="{showInput: true}" format="'hex'">
 							</spectrum-colorpicker>
 							{{fieldName}}
 							<span class='u-pullRight  checkboxContainer'>
@@ -54,7 +45,8 @@
 				<div class='accordion-body'>
 					<ul class='listControl'>
 						<li>
-							Font<br>
+							Font
+							<br>
 							<div class='selectWrapper'>
 								<select ng-model="styleObject.fontFamily">
 									<option ng-repeat="font in fontFileNames">{{font.name}}</option>
@@ -62,14 +54,14 @@
 							</div>
 						</li>
 						<li>
-							font size<br>
-							<input ng-model="styleObject.fontSize" type="range" min="11" max="28" step="1">
-							{{styleObject.fontSize}}px
+							font size
+							<br>
+							<input ng-model="styleObject.fontSize" type="range" min="11" max="28" step="1"> {{styleObject.fontSize}}px
 						</li>
 						<li>
-							line height<br>
-							<input ng-model="styleObject.lineHeight" type="range" min="1" max="2" step=".1">
-							{{styleObject.lineHeight}}x
+							line height
+							<br>
+							<input ng-model="styleObject.lineHeight" type="range" min="1" max="2" step=".1"> {{styleObject.lineHeight}}x
 						</li>
 					</ul>
 				</div>
@@ -78,17 +70,14 @@
 				<h3 class='js-accordionControl  inactive'>Options</h3>
 				<div class='accordion-body'>
 					cursor color:
-					<spectrum-colorpicker
-						ng-model="styleObject.cursorColor"
-						options="{showInput: true}"
-						format="'hex'">
+					<spectrum-colorpicker ng-model="styleObject.cursorColor" options="{showInput: true}" format="'hex'">
 					</spectrum-colorpicker>
 				</div>
 			</div>
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <div class='editor'>
-        <code-box></code-box>
-    </div>
+	<div class='editor'>
+		<code-box></code-box>
+	</div>
 </div>

@@ -8,14 +8,13 @@ function baz() {
 <script src="/js/vendor/ace.js"></script>
 <script src="/js/vendor/mode-javascript.js"></script>
 <script type="text/javascript">
-    var editor = ace.edit("editor");
-    var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
-    editor.session.setMode(new JavaScriptMode());
-    editor.setHighlightActiveLine(false);
-    editor.setShowFoldWidgets(false);
-    editor.setBehavioursEnabled(false);
-    editor.setWrapBehavioursEnabled(false);
-    editor.setShowPrintMargin(false);
-    editor.renderer.setShowGutter(false);
-
+	var editor = ace.edit("editor");
+	var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
+	editor.session.setMode(new JavaScriptMode());
+	editor.setHighlightActiveLine(false);
+	editor.setShowFoldWidgets(false);
+	editor.setBehavioursEnabled(false);
+	editor.setWrapBehavioursEnabled(false);
+	editor.setShowPrintMargin(false);
+	editor.renderer.setShowGutter(false);
 </script>
