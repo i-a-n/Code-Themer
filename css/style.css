@@ -83,6 +83,8 @@ p {
 .toolbar .toolbar-container {
   margin: 1em;
   width: 100%;
+  font-weight: 100;
+  text-transform: capitalize;
 }
 .toolbar .toolbar-container h3.inactive:hover {
   text-decoration: underline;
@@ -119,15 +121,80 @@ ul.listControl li {
 .editor pre:focus {
   outline: none;
 }
-.accordion-body {
-  overflow: hidden;
-  -webkit-transition: max-height 0.44s ease-in-out;
-  -moz-transition: max-height 0.44s ease-in-out;
-  transition: max-height 0.44s ease-in-out;
+.u-pullRight {
+  display: inline-block;
+  float: right;
 }
-.js-accordionControl + .accordion-body {
-  max-height: 100vh;
+.checkboxContainer {
+  margin: 5px 8px 0 0;
 }
-.js-accordionControl.inactive + .accordion-body {
-  max-height: 0;
+.fancyCheckbox {
+  position: relative;
+  margin: 0px auto;
+  display: inline-block;
+}
+.fancyCheckbox label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.4);
+}
+.fancyCheckbox label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.fancyCheckbox input[type=checkbox] {
+  visibility: hidden;
+}
+.fancyCheckbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.selectWrapper {
+  max-width: 400px;
+  margin: 8px auto 2px;
+}
+/* remove the default select arrow for IE10 and up */
+select::-ms-expand {
+  display: none;
+}
+select {
+  /* remove the default select arrow for non-IE browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* works on FF35+ */
+  -o-appearance: none;
+  appearance: none;
+  padding: 0 28px 0 12px;
+  background: #fff url('#') no-repeat 95% 50%;
+  background: #fff url('#') no-repeat calc(95%) 50%;
+  /* custom arrow set as a background */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE1cHgiIGhlaWdodD0iOHB4IiB2aWV3Qm94PSIwIDAgMTUgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTUgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBmaWxsPSIjODk4OTg5IMKgIiBkPSJNMS4wMywwLjE3NWMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMGMtMC4yMzUsMC4yMzItMC4yMzYsMC42MSwwLDAuODQybDYuODk3LDYuODA5ICAgIGMwLjIzNiwwLjIzMywwLjYxOCwwLjIzMywwLjg1NCwwbDYuODk3LTYuODA5YzAuMjM2LTAuMjMzLDAuMjM2LTAuNjEsMC0wLjg0MmMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMEw3LjUsNi4zODQgICAgTDEuMDMsMC4xNzV6Ii8+ICA8L3N2Zz4=);
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  color: #606060;
+  line-height: 16px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  width: 100%;
+  height: 33px;
 }

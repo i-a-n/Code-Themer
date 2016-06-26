@@ -84,6 +84,8 @@ p {
 	.toolbar-container {
 		margin: 1em;
 		width: 100%;
+		font-weight: 100;
+		text-transform: capitalize;
 
 		h3.inactive {
 			&:hover {
@@ -126,15 +128,7 @@ ul.listControl {
 		}
 	}
 }
-.accordion-body {
-	overflow: hidden;
-	-webkit-transition: max-height 0.44s ease-in-out;
-	-moz-transition: max-height 0.44s ease-in-out;
-	transition: max-height 0.44s ease-in-out;
-}
-.js-accordionControl + .accordion-body {
-	max-height: 100vh;
-}
-.js-accordionControl.inactive + .accordion-body {
-	max-height: 0;
+.u-pullRight {
+	display: inline-block;
+	float: right;
 }

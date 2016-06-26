@@ -2,11 +2,9 @@
     body {
         background-color: {{styleObject.bgColor}};
     }
-    .ace_gutter {
-        /* display: none !important; */
-    }
-    .ace_scroller {
-        /* left: 0 !important; */
+    /** editor **/
+    .fancyCheckbox {
+        font-family: {{styleObject.fontFamily}}, monospace;
     }
     .editor {
         background-color: {{styleObject.bgColor}};
@@ -16,7 +14,7 @@
         color: {{styleObject.color}};
         font-family: {{styleObject.fontFamily}}, monospace;
         font-size: {{styleObject.fontSize}}px;
-        line-height: {{styleObject.lineHeight}}px;
+        line-height: {{styleObject.lineHeight}};
     }
     .ace_cursor,
     .ace_string.ace_regexp {
@@ -27,10 +25,14 @@
     .ace_support.ace_class,
     .ace_support.ace_type {
       color: {{styleObject.fields.keywords.color}};
+      font-style: {{styleObject.fields.keywords.style}};
+      font-weight: {{styleObject.fields.keywords.weight}};
     }
     .ace_constant.ace_character,
     .ace_constant.ace_other {
       color: {{styleObject.fields.constants.color}};
+      font-style: {{styleObject.fields.constants.style}};
+      font-weight: {{styleObject.fields.constants.weight}};
     }
     .ace_entity.ace_name.ace_function,
     .ace_entity.ace_name.ace_tag,
@@ -38,17 +40,24 @@
     .ace_variable,
     .ace_variable.ace_language {
       color: {{styleObject.fields.functions.color}};
+      font-style: {{styleObject.fields.functions.style}};
+      font-weight: {{styleObject.fields.functions.weight}};
     }
     .ace_string {
       color: {{styleObject.fields.strings.color}};
+      font-style: {{styleObject.fields.strings.style}};
+      font-weight: {{styleObject.fields.strings.weight}};
     }
     .ace_comment {
       font-style: {{styleObject.fields.comments.style}};
       color: {{styleObject.fields.comments.color}};
+      font-weight: {{styleObject.fields.comments.weight}};
     }
     .ace_entity.ace_other.ace_attribute-name,
     .ace_storage {
       color: {{styleObject.fields.storage.color}};
+      font-style: {{styleObject.fields.storage.style}};
+      font-weight: {{styleObject.fields.storage.weight}};
     }
 
 </style>

@@ -11,7 +11,7 @@
         'fontSize'     : 15,
         'fontFamily'   : 'Source Code Pro',
         'fontWeight'   : 'normal',
-        'lineHeight'   : 20,
+        'lineHeight'   : 1.2,
         'cursorColor'  : '#D30102',
         'fields'       : {
             'keywords' : {
@@ -87,8 +87,6 @@
         $scope.selectedLanguage   = languages[0];
         $scope.languageBrushNames = languageBrushNames;
         $scope.fontFileNames      = fontFileNames;
-
-        console.log($scope.styleObject);
 
         // No firebase yet; I don't want to hard-code my own dummy app here.
         // To set up firebase, see:
