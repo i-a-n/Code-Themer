@@ -1,3 +1,8 @@
 <div class='language'>
-	<i>{{languages[0]}}</i>
+	<div class='selectWrapper'>
+		<select ng-model="selectedLanguage">
+			<option ng-repeat="language in languages">{{language}}</option>
+		</select>
+	</div>
+
 </div>

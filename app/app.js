@@ -89,18 +89,15 @@
 	});
 
 	// Components?
-	angular.module('betterMonospace')
-		.component('languageSelector', {
+	app.component('languageSelector', {
 			templateUrl: 'app/_partials/language-selector.html',
 			controller: 'DefaultController'
 		});
-	angular.module('betterMonospace')
-		.component('dynamicStyle', {
+	app.component('dynamicStyle', {
 			templateUrl: 'app/_partials/dynamic-style.css',
 			controller: 'DefaultController'
 		});
-	angular.module('betterMonospace')
-		.component('codeBox', {
+	app.component('codeBox', {
 			templateUrl: 'app/_partials/code.html',
 			controller: 'DefaultController'
 		});
