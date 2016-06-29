@@ -6,10 +6,20 @@
 
 <div class='body-container'>
 	<div class='toolbar'>
-		<div class='toolbar-container' on-ready>
-			<div>
-				<h3 class='js-accordionControl'>Color</h3>
-				<div class='accordion-body'>
+		<div ng-init="tab=2" class='toolbar-container' on-ready>
+
+			<ul class="nav nav-tabs">
+				<li ng-class="{active: tab == 1}"><a ng-click="tab = 1" href="javascript:void(0);">Theme</a></li>
+				<li ng-class="{active: tab == 2}"><a ng-click="tab = 2" href="javascript:void(0);">Customize</a></li>
+				<li ng-class="{active: tab == 3}"><a ng-click="tab = 3" href="javascript:void(0);">Export</a></li>
+			</ul>
+			<div class="tab-pane" ng-class="{active: tab == 1}" ng-show="tab == 1">
+				<h2>Free font</h2>
+				<h2>Non-free font</h2>
+			</div>
+			<div class="tab-pane" ng-class="{active: tab == 2}" ng-show="tab == 2">
+				<h2 class=''>Color</h2>
+				<div class='controlGroup-body'>
 					<ul class='listControl'>
 						<li>
 							<spectrum-colorpicker ng-model="styleObject.bgColor" options="{showInput: true}" format="'hex'" class="colorPicker">
@@ -39,10 +49,8 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div>
-				<h3 class='js-accordionControl  inactive'>Typography</h3>
-				<div class='accordion-body'>
+				<h2 class=''>Typography</h2>
+				<div class='controlGroup-body'>
 					<ul class='listControl'>
 						<li>
 							Font
@@ -65,15 +73,19 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div>
-				<h3 class='js-accordionControl  inactive'>Options</h3>
-				<div class='accordion-body'>
+				<h2 class=''>Options</h2>
+				<div class='controlGroup-body'>
 					<spectrum-colorpicker ng-model="styleObject.cursorColor" options="{showInput: true}" format="'hex'" class="colorPicker">
 					</spectrum-colorpicker>
 					cursor color
 				</div>
 			</div>
+			<div class="tab-pane" ng-class="{active: tab == 3}" ng-show="tab == 3">
+				<h2>Atom</h2>
+				<h2>Sublime</h2>
+				<h2>Terminal</h2>
+			</div>
+
 		</div>
 	</div>
 

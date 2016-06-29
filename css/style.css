@@ -86,9 +86,8 @@ p {
   font-weight: 100;
   text-transform: capitalize;
 }
-.toolbar .toolbar-container h3.inactive:hover {
-  text-decoration: underline;
-  cursor: default;
+.controlGroup-body {
+  margin-bottom: 50px;
 }
 ul.listControl {
   padding: 0;
@@ -203,4 +202,34 @@ select {
   text-overflow: '';
   width: 100%;
   height: 33px;
+}
+.nav {
+  padding: 0;
+  min-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-tabs li {
+  float: left;
+  padding: 5px 12px;
+  list-style: none;
+  border-radius: 3px;
+}
+.nav-tabs li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-tabs li.active {
+  box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.925);
+}
+.nav-tabs li.active a {
+  color: #00838F;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
 }
