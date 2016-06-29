@@ -12,17 +12,17 @@
 				<div class='accordion-body'>
 					<ul class='listControl'>
 						<li>
-							<spectrum-colorpicker ng-model="styleObject.bgColor" options="{showInput: true}" format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.bgColor" options="{showInput: true}" format="'hex'" class="colorPicker">
 							</spectrum-colorpicker>
 							background
 						</li>
 						<li>
-							<spectrum-colorpicker ng-model="styleObject.color" options="{showInput: true}" format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.color" options="{showInput: true}" format="'hex'" class="colorPicker">
 							</spectrum-colorpicker>
 							default text
 						</li>
 						<li ng-repeat="(fieldName, valueObject) in styleObject.fields">
-							<spectrum-colorpicker ng-model="styleObject.fields[fieldName]['color']" options="{showInput: true}" format="'hex'">
+							<spectrum-colorpicker ng-model="styleObject.fields[fieldName]['color']" options="{showInput: true}" format="'hex'" class="colorPicker">
 							</spectrum-colorpicker>
 							{{fieldName}}
 							<span class='u-pullRight  checkboxContainer'>
@@ -69,9 +69,9 @@
 			<div>
 				<h3 class='js-accordionControl  inactive'>Options</h3>
 				<div class='accordion-body'>
-					cursor color:
-					<spectrum-colorpicker ng-model="styleObject.cursorColor" options="{showInput: true}" format="'hex'">
+					<spectrum-colorpicker ng-model="styleObject.cursorColor" options="{showInput: true}" format="'hex'" class="colorPicker">
 					</spectrum-colorpicker>
+					cursor color
 				</div>
 			</div>
 		</div>

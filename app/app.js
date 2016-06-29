@@ -1,82 +1,21 @@
 // angular goodness goes here.
 // general reference dox: https://docs.angularjs.org/tutorial/
 (function() {
-	var app = angular.module("betterMonospace", ["firebase", "ngRoute", "angularSpectrumColorpicker"]);
+	var app = angular.module("betterMonospace",
+		[
+			"firebase",
+			"ngRoute",
+			"angularSpectrumColorpicker",
+			"betterMonospace.config"
+		]);
 
-	// Global objects
-	var fontURL = "//fonts.union.io/css/compiled/";
-	var styleObject = {
-		'bgColor': '#002B36',
-		'color': '#93A1A1',
-		'fontSize': 15,
-		'fontFamily': 'Source Code Pro',
-		'fontWeight': 'normal',
-		'lineHeight': 1.2,
-		'cursorColor': '#D30102',
-		'fields': {
-			'comments': {
-				'color': '#657B83',
-				'weight': 'normal',
-				'style': 'italic'
-			},
-			'strings': {
-				'color': '#2AA198',
-				'weight': 'normal',
-				'style': 'normal'
-			},
-			'storage': {
-				'color': '#93A1A1',
-				'weight': 'normal',
-				'style': 'normal'
-			},
-			'functions': {
-				'color': '#268BD2',
-				'weight': 'normal',
-				'style': 'normal'
-			},
-			'keywords': {
-				'color': '#859900',
-				'weight': 'normal',
-				'style': 'normal'
-			},
-			'constants': {
-				'color': '#CB4B16',
-				'weight': 'normal',
-				'style': 'normal'
-			}
-		}
-	};
-	var languages = [
-		'JavaScript',
-		'PHP',
-		'bash',
-		'CSS',
-		'Ruby',
-		'Python'
-	];
-	var languageBrushNames = {
-		'JavaScript': 'js',
-		'PHP': 'php'
-	};
-	var fontFileNames = [{
-		name: 'Source Code Pro',
-		fileName: 'source-code-pro'
-	}, {
-		name: 'Fira Mono',
-		fileName: 'fira-mono'
-	}, {
-		name: 'Consolas',
-		fileName: 'consolas'
-	}];
-	var statusString = "Coming soon.";
+	app.controller("DefaultController", function($scope, $firebaseObject, configObject) {
 
-	app.controller("DefaultController", function($scope, $firebaseObject) {
-
-		$scope.styleObject = styleObject;
-		$scope.languages = languages;
-		$scope.selectedLanguage = languages[0];
-		$scope.languageBrushNames = languageBrushNames;
-		$scope.fontFileNames = fontFileNames;
+		$scope.styleObject = configObject.styleObject;
+		$scope.languages = configObject.languages;
+		$scope.selectedLanguage = configObject.languages[0];
+		$scope.languageBrushNames = configObject.languageBrushNames;
+		$scope.fontFileNames = configObject.fontFileNames;
 
 		// No firebase yet; I don't want to hard-code my own dummy app here.
 		// To set up firebase, see:
@@ -125,7 +64,7 @@
 		return {
 			restrict: 'A',
 			link: function(scope, elem, attrs) {
-				domReady();
+				onReady.init();
 			}
 		};
 	});
