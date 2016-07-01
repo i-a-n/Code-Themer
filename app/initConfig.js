@@ -25,7 +25,7 @@ var configObject = {
 			},
 			'storage': {
 				'color': '#93A1A1',
-				'weight': 'normal',
+				'weight': 'bold',
 				'style': 'normal'
 			},
 			'functions': {

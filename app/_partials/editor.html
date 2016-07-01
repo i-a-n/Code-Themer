@@ -1,4 +1,4 @@
-<header class='header'>
+<header class='header' header-init>
 	<div class='logo'>/</div>
 	<h3>better/monospace</h3>
 	<language-selector></language-selector>
@@ -6,7 +6,7 @@
 
 <div class='body-container'>
 	<div class='toolbar'>
-		<div ng-init="tab=2" class='toolbar-container' on-ready>
+		<div ng-init="tab=2" class='toolbar-container'>
 
 			<ul class="nav nav-tabs">
 				<li ng-class="{active: tab == 1}"><a ng-click="tab = 1" href="javascript:void(0);">Theme</a></li>

@@ -1,5 +1,5 @@
 var onReady = {
-	'init': function() {
+	'headerInit': function() {
 		var header = $('header');
 		$(window).scroll(function(){
 			if($(window).scrollTop() <= 20){

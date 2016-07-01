@@ -59,12 +59,12 @@
 		});
 	}]);
 
-	// onready bullshit, sorry for the global var
-	app.directive('onReady', function() {
+	// onready garbage. directive for each element that needs an onReady init
+	app.directive('headerInit', function() {
 		return {
 			restrict: 'A',
 			link: function(scope, elem, attrs) {
-				onReady.init();
+				onReady.headerInit();
 			}
 		};
 	});

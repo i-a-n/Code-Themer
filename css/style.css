@@ -219,6 +219,7 @@ select {
 .nav-tabs li a {
   text-decoration: none;
   color: white;
+  font-weight: 400;
 }
 .nav-tabs li.active {
   box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
