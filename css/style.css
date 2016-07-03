@@ -195,7 +195,7 @@ select {
   cursor: pointer;
 }
 .nav-tabs li.active {
-  background-color: #1e272c;
+  background-color: #2f3c43;
 }
 .tab-pane {
   display: none;
@@ -204,7 +204,7 @@ select {
   display: block;
 }
 .toolbar {
-  background-color: #263238;
+  background-color: #37474F;
   color: white;
   display: flex;
   flex: 0 0 33%;
@@ -218,7 +218,7 @@ select {
   width: 100%;
   font-weight: 100;
   text-transform: capitalize;
-  background-color: #1e272c;
+  background-color: #2f3c43;
   padding: 0 16px;
 }
 .toolbar .toolbar-container .tab-pane {
