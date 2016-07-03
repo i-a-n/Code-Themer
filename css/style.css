@@ -28,7 +28,7 @@ p {
   line-height: 20px;
 }
 .header {
-  background-color: #00838F;
+  background-color: #0097A7;
   color: white;
   position: fixed;
   height: 60px;
@@ -71,37 +71,6 @@ p {
   justify-content: flex-start;
   flex: 1 0 auto;
   margin-top: 60px;
-}
-.toolbar {
-  background-color: #006064;
-  color: white;
-  display: flex;
-  flex: 0 0 25%;
-  z-index: 2;
-  box-shadow: 2px 0 0 rgba(255, 255, 255, 0.8);
-}
-.toolbar .toolbar-container {
-  margin: 1em;
-  width: 100%;
-  font-weight: 100;
-  text-transform: capitalize;
-}
-.controlGroup-body {
-  margin-bottom: 50px;
-}
-ul.listControl {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-ul.listControl li {
-  padding: 2px 0 15px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 14px;
-}
-ul.listControl li .colorPicker {
-  margin: 0 10px 0 0;
 }
 .editor {
   background: #002B36;
@@ -188,12 +157,15 @@ select {
   -o-appearance: none;
   appearance: none;
   padding: 0 44px 0 12px;
-  background: #009aa9 url('#') no-repeat 99% 49%;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.45), 0 1px 0px rgba(255, 255, 255, 0.34);
   /* custom arrow set as a background */
   background-image: url("/static-assets/icons/dropdown-arrow.svg");
+  background-color: #353535;
+  background-repeat: no-repeat;
+  background-position: 99% 49%;
   box-sizing: border-box;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   outline: none;
   cursor: pointer;
   color: white;
@@ -205,32 +177,67 @@ select {
 }
 .nav {
   padding: 0;
+  margin: 0;
   min-height: 15px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: top;
+  flex-direction: column;
+  position: fixed;
+  width: 115px;
 }
 .nav-tabs li {
   float: left;
-  padding: 5px 12px;
+  text-align: center;
+  padding: 13px 12px;
   list-style: none;
-  border-radius: 3px;
-}
-.nav-tabs li a {
-  text-decoration: none;
   color: white;
   font-weight: 400;
+  cursor: pointer;
 }
 .nav-tabs li.active {
-  box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.925);
-}
-.nav-tabs li.active a {
-  color: #00838F;
+  background-color: #2f3c43;
 }
 .tab-pane {
   display: none;
 }
 .tab-pane.active {
   display: block;
+}
+.toolbar {
+  background-color: #37474F;
+  color: white;
+  display: flex;
+  flex: 0 0 33%;
+  max-width: 445px;
+  z-index: 2;
+  box-shadow: 2px 0 0 rgba(255, 255, 255, 0.8);
+}
+.toolbar .toolbar-container {
+  margin: 0;
+  margin-left: 115px;
+  width: 100%;
+  font-weight: 100;
+  text-transform: capitalize;
+  background-color: #2f3c43;
+  padding: 0 16px;
+}
+.toolbar .toolbar-container .tab-pane {
+  min-width: 235px;
+}
+.controlGroup-body {
+  margin-bottom: 50px;
+}
+ul.listControl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.listControl li {
+  padding: 2px 0 15px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+ul.listControl li .colorPicker {
+  margin: 0 10px 0 0;
 }
