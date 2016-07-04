@@ -1,5 +1,5 @@
 # love your code editor
-You need a better, more customized theme for your code editor. Use bettermonospace to build it. 
+Get a theme you love for your code editor. Use bettermonospace to build it. 
 
 ![screenshot](docs/interface-screenshot.png)
 
