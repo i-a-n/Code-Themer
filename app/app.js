@@ -68,5 +68,13 @@
 			}
 		};
 	});
+	app.directive('toolbarControlInit', function() {
+		return {
+			restrict: 'A',
+			link: function(scope, elem, attrs) {
+				onReady.toolbarControlInit();
+			}
+		};
+	});
 
 })();

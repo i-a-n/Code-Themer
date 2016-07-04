@@ -8,9 +8,18 @@
 	<div class='toolbar'>
 		<div>
 			<ul class="nav nav-tabs">
-				<li ng-class="{active: tab == 1}" ng-click="tab = 1">Theme</li>
-				<li ng-class="{active: tab == 2}" ng-click="tab = 2">Customize</li>
-				<li ng-class="{active: tab == 3}" ng-click="tab = 3">Export</li>
+				<li ng-class="{active: tab == 1}" ng-click="tab = 1">
+				    <img src="/static-assets/icons/palette.svg">
+					Themes
+				</li>
+				<li ng-class="{active: tab == 2}" ng-click="tab = 2">
+					<img src="/static-assets/icons/edit.svg">
+					Customize
+				</li>
+				<li ng-class="{active: tab == 3}" ng-click="tab = 3">
+					<img src="/static-assets/icons/export.svg">
+					Export
+				</li>
 			</ul>
 		</div>
 		<div ng-init="tab=2" class='toolbar-container'>
@@ -90,7 +99,10 @@
 		</div>
 	</div>
 
-	<div class='editor'>
+	<div class='editor' toolbar-control-init>
+		<div class='toolbar-control  open'>
+			< Minimize
+		</div>
 		<code-box></code-box>
 	</div>
 </div>

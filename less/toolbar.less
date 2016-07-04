@@ -1,18 +1,17 @@
 .nav {
 	padding: 0;
 	margin: 0;
-    min-height: 15px;
-    display: flex;
-    align-items: top;
-    flex-direction: column;
-    position: fixed;
-	width: 115px;
+	display: flex;
+	align-items: top;
+	flex-direction: column;
+	position: fixed;
+	width: 144px;
 }
 .nav-tabs {
 	li {
 		float: left;
-		text-align: center;
-	    padding: 13px 12px;
+		text-align: left;
+		padding: 26px 13px;
 		list-style: none;
 
 		color: white;
@@ -24,6 +23,13 @@
 			a {
 				//color: @colorPrimary;
 			}
+		}
+
+		img,
+		svg {
+			height: 24px;
+			width: 24px;
+			vertical-align: middle;
 		}
 	}
 }
@@ -41,21 +47,25 @@
 	color: white;
 	display: flex;
 	flex: 0 0 33%;
-	max-width: 445px;
+	max-width: 448px;
 	z-index: 2;
 	box-shadow: 2px 0 0 rgba(255,255,255,.8);
 
+	-webkit-transition: -webkit-transform 0.2s;
+	   -moz-transition: -moz-transform 0.2s;
+	        transition: transform 0.2s;
+
 	.toolbar-container {
 		margin: 0;
-		margin-left: 115px;
+		margin-left: 144px;
 		width: 100%;
 		font-weight: 100;
 		text-transform: capitalize;
 		background-color: darken(@colorSecondary, 4%);
-		padding: 0 16px;
+		padding: 0 16px 0 19px;
 
 		.tab-pane {
-			min-width: 235px;
+			min-width: 240px;
 		}
 	}
 }
@@ -75,5 +85,36 @@ ul.listControl {
 		.colorPicker {
 			margin: 0 10px 0 0;
 		}
+		input[type=range] {
+			width: calc(85% - 3px);
+			margin: 11px 0 0;
+			vertical-align: bottom;
+		}
 	}
+}
+
+.toolbar-control {
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	overflow: hidden;
+	margin: 8px 0 0 12px;
+	opacity: .1;
+	text-indent: 100px;
+	line-height: 100px;
+	background-size: 24px 24px;
+	background-color: white;
+	border-radius: 5px;
+
+	&.open {
+		background-image: url("/static-assets/icons/left-arrow.svg");
+	}
+	&.closed {
+		background-image: url("/static-assets/icons/more-horizontal.svg");
+	}
+	&:hover {
+		opacity: .8;
+		cursor: pointer;
+	}
+
 }

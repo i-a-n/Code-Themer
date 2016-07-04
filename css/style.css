@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 .pageContainer {
   font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -81,12 +82,15 @@ p {
   position: fixed;
   height: 100%;
   width: 100%;
+  -webkit-transition: -webkit-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  transition: transform 0.2s;
 }
 .editor code-box {
   width: 100%;
 }
 .editor pre {
-  margin: 2em 4em;
+  margin: 44px 58px;
   width: 150%;
   height: 100%;
 }
@@ -178,17 +182,16 @@ select {
 .nav {
   padding: 0;
   margin: 0;
-  min-height: 15px;
   display: flex;
   align-items: top;
   flex-direction: column;
   position: fixed;
-  width: 115px;
+  width: 144px;
 }
 .nav-tabs li {
   float: left;
-  text-align: center;
-  padding: 13px 12px;
+  text-align: left;
+  padding: 26px 13px;
   list-style: none;
   color: white;
   font-weight: 400;
@@ -196,6 +199,12 @@ select {
 }
 .nav-tabs li.active {
   background-color: #2f3c43;
+}
+.nav-tabs li img,
+.nav-tabs li svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
 }
 .tab-pane {
   display: none;
@@ -208,21 +217,24 @@ select {
   color: white;
   display: flex;
   flex: 0 0 33%;
-  max-width: 445px;
+  max-width: 448px;
   z-index: 2;
   box-shadow: 2px 0 0 rgba(255, 255, 255, 0.8);
+  -webkit-transition: -webkit-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  transition: transform 0.2s;
 }
 .toolbar .toolbar-container {
   margin: 0;
-  margin-left: 115px;
+  margin-left: 144px;
   width: 100%;
   font-weight: 100;
   text-transform: capitalize;
   background-color: #2f3c43;
-  padding: 0 16px;
+  padding: 0 16px 0 19px;
 }
 .toolbar .toolbar-container .tab-pane {
-  min-width: 235px;
+  min-width: 240px;
 }
 .controlGroup-body {
   margin-bottom: 50px;
@@ -240,4 +252,32 @@ ul.listControl li {
 }
 ul.listControl li .colorPicker {
   margin: 0 10px 0 0;
+}
+ul.listControl li input[type=range] {
+  width: calc(82%);
+  margin: 11px 0 0;
+  vertical-align: bottom;
+}
+.toolbar-control {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  margin: 8px 0 0 12px;
+  opacity: .1;
+  text-indent: 100px;
+  line-height: 100px;
+  background-size: 24px 24px;
+  background-color: white;
+  border-radius: 5px;
+}
+.toolbar-control.open {
+  background-image: url("/static-assets/icons/left-arrow.svg");
+}
+.toolbar-control.closed {
+  background-image: url("/static-assets/icons/more-horizontal.svg");
+}
+.toolbar-control:hover {
+  opacity: .8;
+  cursor: pointer;
 }
