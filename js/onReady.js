@@ -25,7 +25,7 @@ var onReady = {
 			}
 			else {
 				$(this).removeClass('closed').addClass('open');
-				$toolbarAndEditor.css("transform", "translateX(0)");
+				$toolbarAndEditor.css("transform", "none");
 				$('body').css("overflow", "visible");
 			}
 		});
