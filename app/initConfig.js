@@ -58,15 +58,37 @@ var configObject = {
 		'PHP': 'php'
 	},
 	'fontFileNames' : [{
-		name: 'Source Code Pro',
-		fileName: 'source-code-pro'
-	}, {
-		name: 'Fira Mono',
-		fileName: 'fira-mono'
-	}, {
-		name: 'Consolas',
-		fileName: 'consolas'
+			name: 'Source Code Pro',
+			fileName: 'source-code-pro'
+		}, {
+			name: 'Fira Mono',
+			fileName: 'fira-mono'
+		}, {
+			name: 'Consolas',
+			fileName: 'consolas'
 	}],
+	'themes' : {
+		'Solarized (Dark)': {
+			'backgroundColor': '#002B36',
+			'foregroundColor': '#93A1A1'
+		},
+		'Solarized (Light)': {
+			'backgroundColor': 'white',
+			'foregroundColor': '#222'
+		},
+		'Watford': {
+			'backgroundColor': 'darkorange',
+			'foregroundColor': 'oldlace'
+		},
+		'Silverlake': {
+			'backgroundColor': 'gainsboro',
+			'foregroundColor': 'ghostwhite'
+		},
+		'Union': {
+			'backgroundColor': 'lavenderblush',
+			'foregroundColor': 'indigo'
+		}
+	},
 	'statusString' : 'Coming soon.'
 };
 

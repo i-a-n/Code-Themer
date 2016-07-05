@@ -24,8 +24,18 @@
 		</div>
 		<div ng-init="tab=2" class='toolbar-container'>
 			<div class="tab-pane" ng-class="{active: tab == 1}" ng-show="tab == 1">
-				<h2>Free font</h2>
-				<h2>Non-free font</h2>
+				<div class='spacer--vertical'>&nbsp;</div>
+				<ul class="listControl">
+					<li class="theme" ng-repeat="(themeName, themeObject) in themes">
+						{{themeName}}
+						<div class="swatch-container u-pullRight">
+							<span
+								class="swatch"
+								ng-style="{'background-color':themeObject.backgroundColor,'color':themeObject.foregroundColor}"
+							>/</span>
+						</div>
+					</li>
+				</ul>
 			</div>
 			<div class="tab-pane" ng-class="{active: tab == 2}" ng-show="tab == 2">
 				<h2 class=''>Color</h2>

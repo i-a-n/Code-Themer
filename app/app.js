@@ -16,6 +16,7 @@
 		$scope.selectedLanguage = configObject.languages[0];
 		$scope.languageBrushNames = configObject.languageBrushNames;
 		$scope.fontFileNames = configObject.fontFileNames;
+		$scope.themes = configObject.themes;
 
 		// No firebase yet; I don't want to hard-code my own dummy app here.
 		// To set up firebase, see:
