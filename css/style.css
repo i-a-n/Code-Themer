@@ -195,7 +195,7 @@ select {
   list-style: none;
   color: white;
   font-weight: 400;
-  cursor: pointer;
+  cursor: default;
 }
 .nav-tabs li.active {
   background-color: #2f3c43;
@@ -205,6 +205,9 @@ select {
   height: 24px;
   width: 24px;
   vertical-align: middle;
+}
+.nav-tabs li:not(.active):hover {
+  background-color: #6a6a6a;
 }
 .tab-pane {
   display: none;

@@ -16,7 +16,7 @@
 
 		color: white;
 		font-weight: 400;
-		cursor: pointer;
+		cursor: default;
 
 		&.active {
 			background-color: darken(@colorSecondary, 4%);
@@ -31,6 +31,9 @@
 			width: 24px;
 			vertical-align: middle;
 		}
+	}
+	li:not(.active):hover {
+		background-color: #6a6a6a;
 	}
 }
 
