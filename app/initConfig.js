@@ -94,6 +94,6 @@ var configObject = {
 
 (function(angular, undefined) {
 	angular
-		.module('betterMonospace.config', [])
+		.module('octotint.config', [])
 		.constant('configObject', configObject);
 })(window.angular);

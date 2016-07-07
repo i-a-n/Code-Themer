@@ -1,12 +1,12 @@
 // angular goodness goes here.
 // general reference dox: https://docs.angularjs.org/tutorial/
 (function() {
-	var app = angular.module("betterMonospace",
+	var app = angular.module("octotint",
 		[
 			"firebase",
 			"ngRoute",
 			"angularSpectrumColorpicker",
-			"betterMonospace.config"
+			"octotint.config"
 		]);
 
 	app.controller("DefaultController", function($scope, $firebaseObject, configObject) {
@@ -39,6 +39,10 @@
 		});
 	app.component('codeBox', {
 			templateUrl: 'app/_partials/code.html',
+			controller: 'DefaultController'
+		});
+	app.component('logoSvg', {
+			templateUrl: 'app/_partials/logo.html',
 			controller: 'DefaultController'
 		});
 

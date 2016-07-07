@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter-pack",
-  "version": "1.0.0",
-  "description": "Yet another Angular starter pack.",
+  "name": "octotint",
+  "version": "0.0.1",
+  "description": "Love your code editor.",
   "main": "Gruntfile.js",
   "directories": {
     "doc": "docs"

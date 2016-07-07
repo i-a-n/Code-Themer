@@ -38,21 +38,20 @@ p {
 }
 .header .logo {
   display: inline-block;
-  background-color: #FFAB40;
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  font-weight: bold;
-  position: absolute;
-  margin: 15px 1em;
+  height: 48px;
+  width: 48px;
+  margin: 6px 0 6px 12px;
+}
+.header .logo svg {
+  fill: white;
 }
 .header h3 {
   display: inline-block;
-  margin: 0 0 0 1em;
-  padding: 0 1em;
-  font-size: 28px;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  font-weight: bold;
+  margin: 0;
+  vertical-align: top;
   line-height: 60px;
 }
 .header h3:hover {
