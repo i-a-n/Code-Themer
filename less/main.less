@@ -40,6 +40,7 @@ p {
 	}
 	.logo svg {
 		fill: white;
+		animation: colorChange 50s;
 	}
 	h3 {
 		display: inline-block;
@@ -97,7 +98,27 @@ p {
 		}
 	}
 }
+
+/*
+ * Utilities
+ */
 .u-pullRight {
 	display: inline-block;
 	float: right;
+}
+
+
+/*
+ * Animations
+ */
+@keyframes colorChange {
+	0% {
+		fill: white;
+	}
+	55% {
+		fill: #FFAB40;
+	}
+	100% {
+		fill: white;
+	}
 }

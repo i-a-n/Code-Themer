@@ -44,6 +44,7 @@ p {
 }
 .header .logo svg {
   fill: white;
+  animation: colorChange 50s;
 }
 .header h3 {
   display: inline-block;
@@ -96,9 +97,26 @@ p {
 .editor pre:focus {
   outline: none;
 }
+/*
+ * Utilities
+ */
 .u-pullRight {
   display: inline-block;
   float: right;
+}
+/*
+ * Animations
+ */
+@keyframes colorChange {
+  0% {
+    fill: white;
+  }
+  55% {
+    fill: #FFAB40;
+  }
+  100% {
+    fill: white;
+  }
 }
 .checkboxContainer {
   margin: 5px 8px 0 0;
@@ -254,6 +272,15 @@ ul.listControl li {
 }
 ul.listControl li .colorPicker {
   margin: 0 10px 0 0;
+}
+ul.listControl li .colorPicker .sp-replacer {
+  border-radius: 3px;
+  color: #222;
+  background-color: #efefef;
+  border: none;
+}
+ul.listControl li .colorPicker .sp-dd {
+  line-height: 20px;
 }
 ul.listControl li input[type=range] {
   width: calc(82%);
