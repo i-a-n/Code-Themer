@@ -1,9 +1,9 @@
 {
-    "name": "angular-starter-pack",
+    "name": "octotint",
     "authors": [
         "Ian M <ian@union.io>"
     ],
-    "description": "Yet another Angular starter pack.",
+    "description": "love your code editor",
     "main": "",
     "moduleType": [],
     "license": "GPL",
