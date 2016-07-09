@@ -17,11 +17,11 @@ var onReady = {
 		$toolbarControl.click( function() {
 			if ($(this).hasClass('open')) {
 				$(this).removeClass('open').addClass('closed');
+				$('body').css("overflow", "hidden");
 				$toolbarAndEditor.css(
 					"transform",
 					"translateX(-" + ($toolbar.width() + 2) + "px)"
 				);
-				$('body').css("overflow", "hidden");
 			}
 			else {
 				$(this).removeClass('closed').addClass('open');
