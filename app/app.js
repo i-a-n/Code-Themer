@@ -1,5 +1,3 @@
-// angular goodness goes here.
-// general reference dox: https://docs.angularjs.org/tutorial/
 (function() {
 	var app = angular.module("octotint",
 		[
@@ -11,12 +9,12 @@
 
 	app.controller("DefaultController", function($scope, $firebaseObject, configObject) {
 
-		$scope.styleObject = configObject.styleObject;
-		$scope.languages = configObject.languages;
-		$scope.selectedLanguage = configObject.languages[0];
+		$scope.styleObject        = configObject.styleObject;
+		$scope.languages          = configObject.languages;
+		$scope.selectedLanguage   = configObject.languages[0];
 		$scope.languageBrushNames = configObject.languageBrushNames;
-		$scope.fontFileNames = configObject.fontFileNames;
-		$scope.themes = configObject.themes;
+		$scope.fontFileNames      = configObject.fontFileNames;
+		$scope.themes             = configObject.themes;
 
 		// No firebase yet; I don't want to hard-code my own dummy app here.
 		// To set up firebase, see:
@@ -32,36 +30,38 @@
 	app.component('languageSelector', {
 			templateUrl: 'app/_partials/language-selector.html',
 			controller: 'DefaultController'
-		});
+		}
+	);
 	app.component('dynamicStyle', {
 			templateUrl: 'app/_partials/dynamic-style.css',
 			controller: 'DefaultController'
-		});
+		}
+	);
 	app.component('codeBox', {
 			templateUrl: 'app/_partials/code.html',
 			controller: 'DefaultController'
-		});
+		}
+	);
 	app.component('logoSvg', {
 			templateUrl: 'app/_partials/logo.html',
 			controller: 'DefaultController'
-		});
+		}
+	);
 
 	// configuring a very basic routing scheme.
 	app.config(['$routeProvider', function($routeProvider) {
-		$routeProvider.
-		when('/editor', {
+		$routeProvider
+			.when('/editor', {
 				templateUrl: 'app/_partials/editor.html',
 				controller: 'DefaultController'
 			})
-			.
-		when('/editor/:themeID', {
+			.when('/editor/:themeID', {
 				templateUrl: 'app/_partials/editor.html',
 				controller: 'DetailController'
 			})
-			.
-		otherwise({
-			redirectTo: '/editor'
-		});
+			.otherwise({
+				redirectTo: '/editor'
+			});
 	}]);
 
 	// onready garbage. directive for each element that needs an onReady init
