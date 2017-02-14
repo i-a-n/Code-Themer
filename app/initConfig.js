@@ -94,6 +94,6 @@ var configObject = {
 
 (function(angular, undefined) {
 	angular
-		.module('octotint.config', [])
+		.module('codethemer.config', [])
 		.constant('configObject', configObject);
 })(window.angular);

@@ -5,11 +5,11 @@ This project was bootstrapped from one of my other repos, the [Angular Starter P
 You could technically just download/clone this repo and serve this off-the-shelf, but for dev purposes, here's how to build it:
 
 ```
-$ git clone git@github.com:i-a-n/Octotint..git
+$ git clone git@github.com:i-a-n/Code-Themer..git
 $ npm install
 $ npm run server
 ```
-Octotint will be running at http://127.0.0.1:8080/#/editor
+Code Themer will be running at http://127.0.0.1:8080/#/editor
 
 ###Schema
 ```

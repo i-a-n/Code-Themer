@@ -1,10 +1,10 @@
 (function() {
-	var app = angular.module("octotint",
+	var app = angular.module("codethemer",
 		[
 			"firebase",
 			"ngRoute",
 			"angularSpectrumColorpicker",
-			"octotint.config"
+			"codethemer.config"
 		]);
 
 	app.controller("DefaultController", function($scope, $firebaseObject, configObject) {
