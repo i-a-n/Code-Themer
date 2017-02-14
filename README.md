@@ -1,5 +1,5 @@
-# love your code editor
-Get a theme you love for your code editor. Use Octotint to build it. 
+# Love Your Code Editor
+Get a theme you love for your code editor. Use Code Themer to build it. 
 
 ![screenshot](docs/interface-screenshot.png)
 
