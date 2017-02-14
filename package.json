@@ -1,7 +1,7 @@
 {
-	"name": "octotint",
+	"name": "code-themer",
 	"version": "0.0.1",
-	"description": "love your code editor",
+	"description": "Love your code editor",
 	"main": "Gruntfile.js",
 	"directories": {
 		"doc": "docs"
