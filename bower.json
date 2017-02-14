@@ -1,9 +1,9 @@
 {
-	"name": "octotint",
+	"name": "Code Themer",
 	"authors": [
 		"Ian M <ian@union.io>"
 	],
-	"description": "love your code editor",
+	"description": "Love your code editor",
 	"main": "",
 	"moduleType": [],
 	"license": "GPL",
